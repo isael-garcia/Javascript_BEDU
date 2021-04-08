@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote id="quote"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nam adipisci quibusdam quae, qui reprehenderit pariatur, officiis mollitia excepturi sed dolore hic eligendi eos? Suscipit, sed autem. Illo, repudiandae nobis.
+    </blockquote>
+    <script>
+        function createNode(type, child){
+            let node = document.createElement(type);
+
+            if(typeof child === "string"){
+                let text = document.createTextNode(child);
+                node.appendChild(text);
+            }else{
+                node.appendChild(child);
+            }
+            return node;
+        }
+
+        /* console.log(createNode('footer', createNode('strong', '- Karl popper')));
+ */
+
+        document.getElementById('quote');
+        quote.appendChild(createNode("footer" , createNode('strong', "-karl popper")));
+
+    </script>
+</body>
+</html>
